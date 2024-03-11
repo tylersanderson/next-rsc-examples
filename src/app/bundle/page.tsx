@@ -1,4 +1,3 @@
-"use client";
 import { IconGenerator } from "@/components/icon-generator/icon-generator";
 import styles from "./page.module.css";
 

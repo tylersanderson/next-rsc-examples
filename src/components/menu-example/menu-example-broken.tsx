@@ -13,7 +13,7 @@ const HeaderServerComponent = () => {
   return (
     <>
       <button onClick={toggleOpen}>Open Menu</button>
-      <DrawerMenuServerComponent />
+      <DrawerMenuServerComponent open={open} />
     </>
   );
 };

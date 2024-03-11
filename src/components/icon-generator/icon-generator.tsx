@@ -9,7 +9,7 @@ export const IconGenerator = () => {
   ];
   return (
     <Box>
-      <RandomIcon size="4em" />
+      <RandomIcon size="64px" />
     </Box>
   );
 };
