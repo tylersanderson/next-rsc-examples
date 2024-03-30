@@ -1,9 +1,13 @@
-import { Box, Skeleton } from "@mui/material";
+import { Box } from "@mui/material";
+import styles from "./loading-skeleton.module.css";
 
 export const LoadingSkeleton = (props: any) => {
   return (
-    <Box sx={{ backgroundColor: "gray", borderRadius: "8px" }}>
-      <Skeleton variant="rectangular" width={240} height={60} />
-    </Box>
+    <Box
+      className={styles.loading}
+      height={60}
+      width={240}
+      sx={{ backgroundColor: "gray", borderRadius: "8px" }}
+    ></Box>
   );
 };
