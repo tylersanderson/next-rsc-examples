@@ -1,15 +1,21 @@
+"use client";
+
 import { Box } from "@mui/material";
 import * as MuiIcons from "react-icons/fa";
+import { getHashCode } from "./lib";
 
-export const IconGenerator = () => {
+type IconGeneratorProps = {
+  name: string;
+};
+
+export const IconGenerator = (props: IconGeneratorProps) => {
+  const { name } = props;
   const iconKeys = Object.keys(MuiIcons);
-  const randomIndex = Math.floor(Math.random() * iconKeys.length);
-  const RandomIcon = (MuiIcons as { [index: string]: any })[
-    iconKeys[randomIndex]
-  ];
+  const nameIndex = Math.abs(getHashCode(name) % iconKeys.length);
+  const NameIcon = (MuiIcons as { [index: string]: any })[iconKeys[nameIndex]];
   return (
     <Box>
-      <RandomIcon size="64px" />
+      <NameIcon size="64px" />
     </Box>
   );
 };
