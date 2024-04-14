@@ -1,21 +1,21 @@
 "use client";
 
 import { Box } from "@mui/material";
-import * as MuiIcons from "react-icons/fa";
+import * as FaIcons from "react-icons/fa";
 import { getHashCode } from "./lib";
 
 type IconGeneratorProps = {
-  name: string;
+  slug: string;
 };
 
 export const IconGenerator = (props: IconGeneratorProps) => {
-  const { name } = props;
-  const iconKeys = Object.keys(MuiIcons);
-  const nameIndex = Math.abs(getHashCode(name) % iconKeys.length);
-  const NameIcon = (MuiIcons as { [index: string]: any })[iconKeys[nameIndex]];
+  const { slug } = props;
+  const iconKeys = Object.keys(FaIcons);
+  const slugIndex = Math.abs(getHashCode(slug) % iconKeys.length);
+  const SlugIcon = (FaIcons as { [index: string]: any })[iconKeys[slugIndex]];
   return (
     <Box>
-      <NameIcon size="64px" />
+      <SlugIcon size="64px" />
     </Box>
   );
 };
