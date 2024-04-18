@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Streaming Example",
-  description: "RSCs streaming example",
+  title: "React Server Components Examples",
+  description: "React Server Components Examples",
 };
 
 export default function RootLayout({

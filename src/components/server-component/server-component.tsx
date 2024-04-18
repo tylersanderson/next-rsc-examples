@@ -1,6 +1,7 @@
 export type ServerComponentProps = {
   ms: number;
   children?: React.ReactNode;
+  showSeconds?: boolean;
 };
 
 const ServerComponent = async (props: ServerComponentProps) => {
@@ -19,6 +20,7 @@ const ServerComponent = async (props: ServerComponentProps) => {
       key={key}
       style={{
         height: "60px",
+        padding: "10px",
         display: "flex",
         flexDirection: "column",
         alignItems: "flex-start",
@@ -26,7 +28,7 @@ const ServerComponent = async (props: ServerComponentProps) => {
       }}
     >
       <h2>{props.children}</h2>
-      <p>{`${seconds} seconds`}</p>
+      {props.showSeconds && <p>{`${seconds} seconds`}</p>}
     </div>
   );
 };
