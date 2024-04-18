@@ -4,7 +4,11 @@ import React from "react";
 import Popover from "@mui/material/Popover";
 import Button from "@mui/material/Button";
 
-export const PopoverWithButton = ({ children }: any) => {
+type PopoverWithButtonProps = {
+  children: React.ReactNode;
+};
+
+export const PopoverWithButton = ({ children }: PopoverWithButtonProps) => {
   const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
     null
   );

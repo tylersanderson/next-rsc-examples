@@ -2,7 +2,7 @@ import { PopoverWithButton } from "@/components/popover-with-button/popover-with
 import { ServerComponent } from "@/components/server-component/server-component";
 import styles from "./page.module.css";
 
-export default function Children() {
+export default function Prop() {
   return (
     <main className={styles.main}>
       <h2>Server Component Passed as Prop</h2>
